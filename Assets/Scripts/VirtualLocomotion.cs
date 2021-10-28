@@ -45,7 +45,7 @@ public class VirtualLocomotion : MonoBehaviour
 
         if (inputAxes.y >= deadZone || inputAxes.y <= -deadZone)
         {
-            Vector3 moveVector = moveDirection.forward;
+            Vector3 moveVector = moveDirection.TransformDirection(Vector3.forward);
 
             if (!flyMode)
             {
